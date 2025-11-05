@@ -4,7 +4,7 @@ nixPkgs = ['nodejs', 'php82', 'php82Packages.composer']
 [phases.install]
 cmds = [
     'cd backend && composer install --no-dev --optimize-autoloader --ignore-platform-reqs',
-    'cd frontend && npm ci'
+    'cd frontend && npm install'
 ]
 
 [phases.build]
