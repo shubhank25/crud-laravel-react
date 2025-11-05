@@ -1,9 +1,9 @@
 [phases.setup]
-nixPkgs = ['nodejs', 'php81', 'php81Packages.composer']
+nixPkgs = ['nodejs', 'php82', 'php82Packages.composer']
 
 [phases.install]
 cmds = [
-    'cd backend && composer install --no-dev --optimize-autoloader',
+    'cd backend && composer install --no-dev --optimize-autoloader --ignore-platform-reqs',
     'cd frontend && npm ci'
 ]
 
